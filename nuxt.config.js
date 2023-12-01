@@ -1,8 +1,7 @@
 export default defineNuxtConfig({
-
+  mode: 'universal',
   target: 'static',
   devtools: { enabled: true },
-  
   app: {
     head: {
       charset: 'utf-8',
@@ -96,12 +95,15 @@ export default defineNuxtConfig({
     dir: 'content', // Path to the "content" directory
     fullTextSearchFields: ['title', 'description'] // Optional: Specify fields for full-text search
   },
+
+
   // In your nuxt.config.js file
   router: {
     routes: [
       {
         path: '/realisations/:id',
         component: '~/pages/realisations.vue',
+        props: (route) => ({ realisations: payload }),
       },
     ],
   },
@@ -130,3 +132,4 @@ export default defineNuxtConfig({
   }
 
 })
+
