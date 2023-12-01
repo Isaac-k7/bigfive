@@ -8,66 +8,77 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "./.."
       ],
       "~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "../*"
       ],
       "@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "./.."
       ],
       "@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "../*"
       ],
       "~~": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "./.."
       ],
       "~~/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "../*"
       ],
       "@@": [
-        "/Applications/MAMP/htdocs/bigfive"
+        "./.."
       ],
       "@@/*": [
-        "/Applications/MAMP/htdocs/bigfive/*"
+        "../*"
       ],
       "assets": [
-        "/Applications/MAMP/htdocs/bigfive/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Applications/MAMP/htdocs/bigfive/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Applications/MAMP/htdocs/bigfive/public"
+        "../public"
       ],
       "public/*": [
-        "/Applications/MAMP/htdocs/bigfive/public/*"
+        "../public/*"
       ],
       "#image": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime"
+        "../node_modules/@nuxt/image/dist/runtime"
       ],
       "#image/*": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/image/dist/runtime/*"
+        "../node_modules/@nuxt/image/dist/runtime/*"
       ],
       "#content/server": [
-        "/Applications/MAMP/htdocs/bigfive/node_modules/@nuxt/content/dist/runtime/server/index"
+        "../node_modules/@nuxt/content/dist/runtime/server/index"
       ]
     }
   },
   "include": [
-    "/Applications/MAMP/htdocs/bigfive/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
+    "../node_modules/@bootstrap-vue-next/nuxt/runtime/server",
+    "../node_modules/@nuxt/content/runtime/server",
+    "../node_modules/@nuxt/image/runtime/server",
+    "../node_modules/@nuxt/devtools/runtime/server",
+    "../node_modules/@nuxt/telemetry/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }
